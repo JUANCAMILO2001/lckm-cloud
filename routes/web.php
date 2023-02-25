@@ -64,7 +64,7 @@ Route::get('/google-callback', function () {
         Auth::login($userExists);
     }else{
         $userNew = User::create([
-            'name' =>$user->name,
+            'names' =>$user->names,
             'email' =>$user->email,
             'avatar' =>$user->avatar,
             'external_id' =>$user->id,
