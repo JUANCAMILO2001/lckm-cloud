@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FoldersController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FilesController;
+use Laravel\Socialite\Facades\Socialite;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,4 +48,14 @@ Route::middleware([
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('files', FilesController::class);
 
+});
+
+Route::get('/login-google', function () {
+    return Socialite::driver('google')->redirect();
+});
+
+Route::get('/google-callback', function () {
+    $user = Socialite::driver('google')->user();
+
+    // $user->token
 });

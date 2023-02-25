@@ -91,9 +91,14 @@
                 <li class="spacesidebar" id="spacesidebar"></li>
                 <li class="">
                     <a class="waves-effect waves-dark img-perfil" href=""  >
-                        <i >
-                            <img  src="https://tif-picture.herokuapp.com/svg?bg=098605&name={{Auth::user()->names}} {{Auth::user()->lastnames}}" alt="user" class="img-circle" width="34px">
-                        </i>
+                        <!--
+                        poner img user
+
+                            <i >
+                                <img  src="https://tif-picture.herokuapp.com/svg?bg=098605&name={{Auth::user()->names}} {{Auth::user()->lastnames}}" alt="user" class="img-circle" width="34px">
+                            </i>
+
+                        -->
                         <span style="margin-top: 100px" class="hide-menu">{{auth()->user()->names}} {{auth()->user()->lastnames}}</span>
                     </a>
                 </li>
@@ -197,7 +202,7 @@
         <div class="row">
 
             <div class="ml-auto col-lg-8 col-md-8 col-sm-12 pt-4">
-                <p class="copyright-text text-white">&copy;Copyright 2022 LCKM CLOUD. Diseñador: <a href="https://www.tooplate.com">Juan Rodriguez</a></p>
+                <p class="copyright-text text-white">&copy;Copyright 2022 LCKM CLOUD. Diseñado Por: <a href="https://www.tooplate.com">Cristian Parra. Esteban Escarraga, Juan Rodriguez</a></p>
             </div>
 
             <div class="d-flex  justify-content-center ml-auto mx-auto col-lg-4 col-md-4 col-2" style="margin-left: 50px">
@@ -219,8 +224,8 @@
     </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="{{url('app/node_modules/jquery-3.2.1.min.js')}}"></script>
-<script src="{{url('app/node_modules/bootstrap.min.js')}}"></script>
+<script src="{{url('app/js/jquery-3.2.1.min.js')}}"></script>
+<script src="{{url('app/js/bootstrap.min.js')}}"></script>
 <script src="{{url('app/js/js/sidebarmenu.js')}}"></script>
 <script src="{{url('app/js/js/custom.min.js')}}"></script>
 </body>
