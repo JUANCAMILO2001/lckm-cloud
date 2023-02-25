@@ -35,5 +35,4 @@ return [
         'client_secret' => env('GOOGLE_OAUTH_KEY'),
         'redirect' => '/google-callback',
     ],
-
 ];
