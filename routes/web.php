@@ -6,7 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FilesController;
 use Laravel\Socialite\Facades\Socialite;
 use App\Models\User;
-use Illuminate\Auth;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -58,12 +58,13 @@ Route::get('/login-google', function () {
 Route::get('/google-callback', function () {
     $user = Socialite::driver('google')->user();
 
-   /* $userExists = User::where('external_id', $user->id)->where('external_auth', 'google')->first();
+
+    $userExists = User::where('external_id', $user->id)->where('external_auth', 'google')->first();
     if ($userExists) {
         Auth::login($userExists);
     } else {
         $userNew = User::create([
-            'names' => $user->names,
+            'names' => $user->name,
             'email' => $user->email,
             'avatar' => $user->avatar,
             'external_id' => $user->id,
@@ -73,6 +74,6 @@ Route::get('/google-callback', function () {
 
 
     }
-    return redirect('/dashboard');*/
+    return redirect('/dashboard');
     // $user->token
 });
