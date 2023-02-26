@@ -24,7 +24,7 @@
 
   :root {
     --primary-color:        #098605;
-    --white-color:          #ffffff;
+    --white-color: #ffffff;
     --dark-color:           #171819;
     --about-bg-color:       #f9f9f9;
 
@@ -163,6 +163,20 @@
   .bg-color {
     background: var(--primary-color);
     color: var(--white-color);
+  }
+
+  .custom-btn.bordereds:hover,
+  .custom-btn.bordereds:focus,
+  .custom-btn.bg-color:hover,
+  .custom-btn.bg-color:focus {
+      background: #D2DAD2;
+      border-color: transparent;
+      color: var(--white-color);
+  }
+
+  .bordereds {
+      border: 1px solid #F33822;
+      color: #F33822;
   }
 
 

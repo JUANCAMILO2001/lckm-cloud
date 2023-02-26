@@ -20,7 +20,14 @@
                             <br>
                             <div class="row form-group d-flex justify-content-center ">
                                 <button type="submit" class="btn custom-btn bordered " data-aos="fade-up" data-aos-delay="600">Iniciar Sesión</button>
-                                <button type="submit" class="btn custom-btn bordered " data-aos="fade-up" data-aos-delay="600">Iniciar Sesión con Google</button>
+                                <a href="{{url('/login-google')}}" class="btn custom-btn bordereds " data-aos="fade-up" data-aos-delay="600">
+                                    <span style="color: #22A1F3; font-size: 20px;  font-weight: bold;">G</span>
+                                    <span style="color: #F32522; font-size: 20px;  font-weight: bold;">O</span>
+                                    <span style="color: #F3B122; font-size: 20px;  font-weight: bold;">O</span>
+                                    <span style="color: #22A1F3; font-size: 20px;  font-weight: bold;">G</span>
+                                    <span style="color: #05B408; font-size: 20px;  font-weight: bold;">L</span>
+                                    <span style="color: #F32522; font-size: 20px;  font-weight: bold;">E</span>
+                                </a>
                                 <p class="text-center" style="margin-top: 25px">¿Aun no te has Registrado?  | <a class="link-primary" href="{{route('register')}}">¡REGISTRATE AHORA!</a></p>
                             </div>
                         </form>

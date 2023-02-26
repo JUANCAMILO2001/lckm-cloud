@@ -21,7 +21,7 @@
                         <a href="{{route('register')}}" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700">REGISTRARSE</a>
                         <h6 class="m-5" data-aos="fade-up" data-aos-delay="300">INICIAR CON GOOGLE</h6>
 
-                        <a href="{{url('/login-google')}}" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600"><img src="{{url('app/img/Google_icon-icons.com_60497.svg')}}"></a>
+                        <a href="{{url('/login-google')}}" class="btn custom-btn  mt-3" data-aos="fade-up" data-aos-delay="600"><img src="{{url('app/img/Google_icon-icons.com_60497.svg')}}"></a>
                     </div>
                 </div>
 
