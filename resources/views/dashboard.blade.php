@@ -88,7 +88,7 @@
                                        placeholder="{{$file->name}}">
                             </fieldset>
                             <div class="form-group">
-                                <label class="pt-3">Nuevo Nombre de su Archivo</label>
+                                <label class="pt-3">Nuevo Nombre de su Archivo.</label>
                                 <input type="text" class="form-control" name="name" value="{{$file->name}}" id="name"
                                        placeholder="Escriba el Nombre de su Archivo">
                             </div>
