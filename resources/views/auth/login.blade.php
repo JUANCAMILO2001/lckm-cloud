@@ -20,6 +20,7 @@
                             <br>
                             <div class="row form-group d-flex justify-content-center ">
                                 <button type="submit" class="btn custom-btn bordered " data-aos="fade-up" data-aos-delay="600">Iniciar Sesión</button>
+                                <button type="submit" class="btn custom-btn bordered " data-aos="fade-up" data-aos-delay="600">Iniciar Sesión con Google</button>
                                 <p class="text-center" style="margin-top: 25px">¿Aun no te has Registrado?  | <a class="link-primary" href="{{route('register')}}">¡REGISTRATE AHORA!</a></p>
                             </div>
                         </form>
