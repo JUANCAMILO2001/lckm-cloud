@@ -2,7 +2,7 @@
 @section('title', 'CONTACTO')
 @section('content')
     <!-- CONTACT -->
-    <section class="contact section" id="contact">
+    <section class="contact section" id="contact" style="height: 92vh;">
         <div class="container">
             <div class="row">
 

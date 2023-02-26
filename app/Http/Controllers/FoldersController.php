@@ -19,4 +19,15 @@ class FoldersController extends Controller
         return back();
 
     }
+    public function update(Request $request, $id)
+    {
+        $folder = Folder::find($id)->update($request->all());
+        return back();
+    }
+
+    public function destroy($id)
+    {
+        $folder = Folder::find($id)->delete();
+        return back();
+    }
 }

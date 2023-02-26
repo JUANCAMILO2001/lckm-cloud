@@ -24,28 +24,31 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <h3 class="text-dark a">Configuraciones de Carpetas </h3>
-                        <form action="">
+                            <form action="{{route('folders.update', $folder->id)}}" method="post">
+                                @csrf
+                                @method('PUT')
+                                <div class="form-group">
+                                    <fieldset disabled>
+                                        <label class="pt-3">Nombre Actual de su Carpeta</label>
+                                        <input type="text" class="form-control " id="disabledTextInput"
+                                               placeholder="{{$folder->name}}">
+                                    </fieldset>
+                                    <label class="pt-3">Nuevo Nombre de su Carpeta</label>
+                                    <input  type="text" class="form-control" name="name" id="name"
+                                           placeholder="Escriba el Nombre de su Carpeta">
+                                </div>
 
 
-                            <div class="form-group">
-                                <fieldset disabled>
-                                    <label class="pt-3">Nombre Actual de su Carpeta</label>
-                                    <input type="text" class="form-control " id="disabledTextInput"
-                                           placeholder="{{$folder->name}}">
-                                </fieldset>
-                                <label class="pt-3">Nuevo Nombre de su Carpeta</label>
-                                <input required type="text" class="form-control" name="name" id="name"
-                                       placeholder="Escriba el Nombre de su Carpeta">
-                            </div>
+                                <button class="btn btn-models-edit float-right " type="submit" style="font-size: 14px">
+                                    Editar Nombre
+                                </button>
+                            </form>
 
-
-                            <button class="btn btn-models-edit float-right " type="submit" style="font-size: 14px">
-                                Editar Nombre
-                            </button>
-                            <button class="btn btn-models-delete float-left" type="submit">Eliminar</button>
-
-
-                        </form>
+                            <form action="{{route('folders.destroy', $folder->id)}}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-models-delete float-left" type="submit">Eliminar</button>
+                            </form>
                     </div>
                 </div>
             </div>
@@ -76,7 +79,9 @@
                         </div>
 
                         <h3 class="text-dark">Configuraciones de Archivo</h3>
-                        <form action="">
+                        <form method="post" action="{{route('files.update', $file->id)}}" id="editarFile">
+                            @csrf
+                            @method('PUT')
                             <fieldset disabled>
                                 <label class="pt-3">Nombre Actual de su Archivo</label>
                                 <input type="text" class="form-control " id="disabledTextInput"
@@ -84,16 +89,24 @@
                             </fieldset>
                             <div class="form-group">
                                 <label class="pt-3">Nuevo Nombre de su Archivo</label>
-                                <input type="text" class="form-control" name="name" id="name"
+                                <input type="text" class="form-control" name="name" value="{{$file->name}}" id="name"
                                        placeholder="Escriba el Nombre de su Archivo">
                             </div>
-                            <div style="margin-left: 3%">
-                                <button class="btn btn-models-delete" type="submit">Elimanar</button>
-                                <button class="btn btn-models-share" type="submit">Compartir</button>
-                                <button class="btn btn-models-dowload" type="submit">Descargar</button>
-                                <button class="btn btn-models-edit" type="submit">Editar</button>
-                            </div>
+
                         </form>
+                        <form method="post" action="{{route('files.destroy', $file->id)}}" id="eliminarFile">
+                            @csrf
+                            @method('DELETE')
+                        </form>
+                        <div style="margin-left: 3%">
+                            <a onclick="document.getElementById('eliminarFile').submit()" class="btn btn-models-delete" >Eliminar</a>
+                            <button class="btn btn-models-share" type="submit">Compartir</button>
+                            <button class="btn btn-models-dowload" type="submit">Descargar</button>
+                            <a onclick="document.getElementById('editarFile').submit()"  class="btn btn-models-edit"  >Editar</a>
+
+                        </div>
+
+
                     </div>
                 </div>
             </div>

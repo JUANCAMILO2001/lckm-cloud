@@ -68,7 +68,7 @@
             <div class="ml-auto col-lg-8 col-md-6 pt-3">
                 <p class="copyright-text text-white">&copy;Copyright 2022 LCKM CLOUD.
 
-                    Diseñador: <a href="https://www.tooplate.com">Juan Rodriguez</a></p>
+                    Diseñador: <a href="https://www.tooplate.com">Esteban Escarraga, Cristian Parra, Juan Rodriguez.</a></p>
             </div>
 
             <div class="d-flex justify-content-center mx-auto col-lg-4 col-md-6 col-12 pt-3">
@@ -85,11 +85,15 @@
 </footer>
 
 <!-- SCRIPTS -->
+
+
 <script src="{{url('app/js/jquery.min.js')}}"></script>
 <script src="{{url('app/js/bootstrap.min.js')}}"></script>
 <script src="{{url('app/js/aos.js')}}"></script>
 <script src="{{url('app/js/smoothscroll.js')}}"></script>
 <script src="{{url('app/js/custom.js')}}"></script>
+
+
 
 </body>
 </html>

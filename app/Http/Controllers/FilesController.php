@@ -23,4 +23,14 @@ class FilesController extends Controller
         return back();
 
     }
+    public function update(Request $request, $id)
+    {
+        $file = File::find($id)->update($request->all());
+        return back();
+    }
+    public function destroy($id)
+    {
+        $file = File::find($id)->delete();
+        return back();
+    }
 }

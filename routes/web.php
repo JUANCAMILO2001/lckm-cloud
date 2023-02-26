@@ -49,6 +49,7 @@ Route::middleware([
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('files', FilesController::class);
 
+
 });
 
 Route::get('/login-google', function () {
