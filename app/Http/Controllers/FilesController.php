@@ -33,4 +33,11 @@ class FilesController extends Controller
         $file = File::find($id)->delete();
         return back();
     }
+    public function download($id)
+    {
+        $file = File::where('id', $id)->firstOrFail();
+        $pathToFile = storage_path("app/" . $file->url);
+        // return response()->download($pathToFile);
+        return response()->file($pathToFile);
+    }
 }

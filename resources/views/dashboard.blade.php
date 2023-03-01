@@ -101,7 +101,7 @@
                         <div style="margin-left: 3%">
                             <a onclick="document.getElementById('eliminarFile').submit()" class="btn btn-models-delete" >Eliminar</a>
                             <button class="btn btn-models-share" type="submit">Compartir</button>
-                            <button class="btn btn-models-dowload" type="submit">Descargar</button>
+                            <a href="{{ route('file.download', $file->id) }}" class="btn btn-models-delete">Descargar</a>
                             <a onclick="document.getElementById('editarFile').submit()"  class="btn btn-models-edit"  >Editar</a>
 
                         </div>

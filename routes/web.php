@@ -48,7 +48,7 @@ Route::middleware([
     Route::resource('folders', FoldersController::class);
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('files', FilesController::class);
-
+    Route::get('file/{id}/download', [FilesController::class, 'download'])->name('file.download');
 
 });
 
