@@ -3,6 +3,7 @@
 @section('content')
     <div class="col-12 col-12">
         <h3 class="text-dark pb-3">Carpetas</h3>
+
     </div>
     @foreach($folders as $folder)
         <div class="col-md-2 col-6 ">
@@ -14,7 +15,8 @@
                 <p class="text-center" style="font-size: 14px;" title="{{$folder->name}}">
                     {{substr($folder->name,0,12)}}.. <i class="fa fa-ellipsis-v "
                                                         style="margin-left: 18px; cursor: pointer;font-size: 17px; padding-bottom: 10px"
-                                                        data-toggle="modal" data-target="#add-edit-folder-{{ $loop->iteration }}"></i>
+                                                        data-toggle="modal"
+                                                        data-target="#add-edit-folder-{{ $loop->iteration }}"></i>
                 </p>
             </div>
 
@@ -24,31 +26,31 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <h3 class="text-dark a">Configuraciones de Carpetas </h3>
-                            <form action="{{route('folders.update', $folder->id)}}" method="post">
-                                @csrf
-                                @method('PUT')
-                                <div class="form-group">
-                                    <fieldset disabled>
-                                        <label class="pt-3">Nombre Actual de su Carpeta</label>
-                                        <input type="text" class="form-control " id="disabledTextInput"
-                                               placeholder="{{$folder->name}}">
-                                    </fieldset>
-                                    <label class="pt-3">Nuevo Nombre de su Carpeta</label>
-                                    <input  type="text" class="form-control" name="name" id="name"
-                                           placeholder="Escriba el Nombre de su Carpeta">
-                                </div>
+                        <form action="{{route('folders.update', $folder->id)}}" method="post">
+                            @csrf
+                            @method('PUT')
+                            <div class="form-group">
+                                <fieldset disabled>
+                                    <label class="pt-3">Nombre Actual de su Carpeta</label>
+                                    <input type="text" class="form-control " id="disabledTextInput"
+                                           placeholder="{{$folder->name}}">
+                                </fieldset>
+                                <label class="pt-3">Nuevo Nombre de su Carpeta</label>
+                                <input type="text" class="form-control" name="name" id="name"
+                                       placeholder="Escriba el Nombre de su Carpeta">
+                            </div>
 
 
-                                <button class="btn btn-models-edit float-right " type="submit" style="font-size: 14px">
-                                    Editar Nombre
-                                </button>
-                            </form>
+                            <button class="btn btn-models-edit float-right " type="submit" style="font-size: 14px">
+                                Editar Nombre
+                            </button>
+                        </form>
 
-                            <form action="{{route('folders.destroy', $folder->id)}}" method="post">
-                                @csrf
-                                @method('DELETE')
-                                <button class="btn btn-models-delete float-left" type="submit">Eliminar</button>
-                            </form>
+                        <form action="{{route('folders.destroy', $folder->id)}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-models-delete float-left" type="submit">Eliminar</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -58,6 +60,14 @@
 
     <div class="col-12 col-12">
         <h3 class="text-dark pt-3 pb-5">Archivos</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <form action="{{route('files.store')}}" method="POST" class="dropzone" name="file"  enctype="multipart/form-data" id="fileupl">
+
+                </form>
+
+            </div>
+        </div>
     </div>
     @foreach($files as $file)
         <div class="col-md-2 col-6">
@@ -99,18 +109,19 @@
                             @method('DELETE')
                         </form>
                         <div style="margin-left: 3%">
-                            <a onclick="document.getElementById('eliminarFile').submit()" class="btn btn-models-delete" >Eliminar</a>
+                            <a onclick="document.getElementById('eliminarFile').submit()" class="btn btn-models-delete">Eliminar</a>
                             <button class="btn btn-models-share" type="submit">Compartir</button>
-                            <a href="{{ route('file.download', $file->id) }}" class="btn btn-models-delete">Descargar</a>
-                            <a onclick="document.getElementById('editarFile').submit()"  class="btn btn-models-edit"  >Editar</a>
+                            <a href="{{ route('file.download', $file->id) }}"
+                               class="btn btn-models-delete">Descargar</a>
+                            <a onclick="document.getElementById('editarFile').submit()" class="btn btn-models-edit">Editar</a>
 
                         </div>
-
 
                     </div>
                 </div>
             </div>
         </div>
     @endforeach
+
 
 @endsection

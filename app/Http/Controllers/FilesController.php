@@ -17,7 +17,7 @@ class FilesController extends Controller
         $nombreArchivo = $path->getClientOriginalName();
 
         $rutaArchivo = $path->storeAs('public', $nombreArchivo );
-
+dd($rutaArchivo);
         $file = File::create([
             'name' => $request->name,
             'url' =>  $rutaArchivo,
@@ -50,4 +50,5 @@ class FilesController extends Controller
         return response()->download($pathToFile);
 
     }
+
 }
