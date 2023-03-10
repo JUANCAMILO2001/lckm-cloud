@@ -17,7 +17,7 @@ class FilesController extends Controller
         $nombreArchivo = $path->getClientOriginalName();
 
         $rutaArchivo = $path->storeAs('public', $nombreArchivo );
-dd($rutaArchivo);
+
         $file = File::create([
             'name' => $request->name,
             'url' =>  $rutaArchivo,
@@ -37,7 +37,10 @@ dd($rutaArchivo);
 
     public function destroy($id)
     {
-        $file = File::find($id)->delete();
+        $file = File::findOrFail($id);
+        $file->delete();
+        Storage::delete($file->url);
+
         return back();
     }
 

@@ -62,7 +62,7 @@
         <h3 class="text-dark pt-3 pb-5">Archivos</h3>
         <div class="row">
             <div class="col-md-12">
-                <form action="{{route('files.store')}}" method="POST" class="dropzone" name="file"  enctype="multipart/form-data" id="fileupl">
+                <form action="{{route('files.store')}}" method="POST" class="dropzone"  enctype="multipart/form-data" id="fileupl">
 
                 </form>
 
