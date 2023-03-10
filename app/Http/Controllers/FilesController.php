@@ -10,7 +10,11 @@ use Illuminate\Support\Facades\Storage;
 class FilesController extends Controller
 {
     public function store(Request $request)
+
     {
+        $request->validate([
+
+        ]);
         $user = Auth::user();
         $folder = $request->folder ? $request->folder : null;
         $path = $request->file('file');
@@ -19,8 +23,8 @@ class FilesController extends Controller
         $rutaArchivo = $path->storeAs('public', $nombreArchivo );
 
         $file = File::create([
-            'name' => $request->name,
-            'url' =>  $rutaArchivo,
+            'name' => $nombreArchivo,
+            'url' => $rutaArchivo,
             'user_id' => $user->id,
             'folder_id' => $folder,
 

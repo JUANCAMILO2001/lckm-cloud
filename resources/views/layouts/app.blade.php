@@ -5,10 +5,16 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <link href="{{url('app/css/style.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{url('app/css/tooplate-gymso-style.css')}}">
     <link rel="stylesheet" href="{{url('app/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css"/>
+
+
+    @yield('css')
+
+
 
 
     <title>@yield('title') - LCKM CLOUD</title>
@@ -149,7 +155,7 @@
                                             Carpeta</a>
                                         <a class="dropdown-item" data-toggle="modal" data-target="#add-new-file"><i
                                                 class="fa fa-paperclip" style="font-size: 20px; margin-right: 10px"></i>Nuevo
-                                            Artivo</a>
+                                            Archivo</a>
                                     </div>
                                 </div>
                             </div>
@@ -194,7 +200,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-body">
-                <h3 class="text-dark">Nueva Archivo</h3>
+                <h3 class="text-dark">Nuevo Archivo</h3>
                 <form action="{{route('files.store')}}"
                       method="post"
                       enctype="multipart/form-data"
@@ -203,8 +209,7 @@
 
                     <input type="hidden" value="{{request()->get('folder')}}" name="folder">
                     <div class="form-group">
-                        <input required type="text" class="form-control" name="name" id="name"
-                               placeholder="Escriba el Nombre de su Archivo">
+
                         <input required type="file" class="form-control" name="file" id="file">
 
                     </div>
@@ -240,8 +245,8 @@
                        class="text-white fa fa-linkedin mr-1"></a>
                 </p>
                 <p class="mr-4 pt-4 d-none d-sm-none d-md-none d-lg-block">
-                    <a href="https://www.instagram.com/camilo_stunt2001/" class="text-white fa fa-instagram"
-                       class="fa fa-instagram mr-1"></a>
+                    <a href="https://www.instagram.com/camilo_stunt2001/" class="text-white fa fa-instagram mr-1"
+                       ></a>
                 </p>
             </div>
 
@@ -255,18 +260,9 @@
 <script src="{{url('app/js/bootstrap.min.js')}}"></script>
 <script src="{{url('app/js/js/sidebarmenu.js')}}"></script>
 <script src="{{url('app/js/js/custom.min.js')}}"></script>
-    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
-    <script>
-        Dropzone.options.fileupl = {
-            headers:{
-                'X-CSRF-TOKEN': "{{csrf_token()}}",
-                url:{{url("file/store")}}
-            },
 
-            dictDefaultMessage:"Arrastre los archivos aquí",
-            maxiFilesize: 1000
+<script src="{{ asset('js/app.js') }}"></script>
 
-        };
-    </script>
-</body>
+@yield('js')
+        </body>
 </html>

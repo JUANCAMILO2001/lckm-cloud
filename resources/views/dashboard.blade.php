@@ -1,5 +1,11 @@
 @extends('layouts.app')
+
 @section('title', 'DASHBOARD')
+
+
+@section('css')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css">
+@endsection
 @section('content')
     <div class="col-12 col-12">
         <h3 class="text-dark pb-3">Carpetas</h3>
@@ -62,7 +68,8 @@
         <h3 class="text-dark pt-3 pb-5">Archivos</h3>
         <div class="row">
             <div class="col-md-12">
-                <form action="{{route('files.store')}}" method="POST" class="dropzone"  enctype="multipart/form-data" id="fileupl">
+                <form action="{{route('files.store')}}" method="post" class="dropzone" enctype="multipart/form-data"
+                      id="fileupl">
 
                 </form>
 
@@ -123,5 +130,19 @@
         </div>
     @endforeach
 
+@endsection
+@section('js')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js"></script>
+    <script>
+        Dropzone.options.fileupl = {
+            headers:{
+                'X-CSRF-TOKEN': "{{csrf_token()}}"
 
+            },
+
+            dictDefaultMessage:"Arrastre los archivos aquí",
+            maxiFilesize: 100000
+
+        };
+    </script>
 @endsection
