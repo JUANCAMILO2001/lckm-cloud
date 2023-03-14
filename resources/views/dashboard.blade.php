@@ -141,7 +141,7 @@
             },
 
             dictDefaultMessage:"Arrastre los archivos aquí",
-            maxiFilesize: 100000
+            maxiFilesize: 1000000
 
         };
     </script>
