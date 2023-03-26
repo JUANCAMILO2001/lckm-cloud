@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f84c1686-44ef-41da-ba74-849caeaca46f" name="Changes" comment="modificacion">
-      <change beforePath="$PROJECT_DIR$/laravel_87/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/laravel_87/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="f84c1686-44ef-41da-ba74-849caeaca46f" name="Changes" comment="modificacion" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -179,7 +177,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679839972755</updated>
-      <workItem from="1679839974953" duration="1010000" />
+      <workItem from="1679839974953" duration="1443000" />
     </task>
     <task id="LOCAL-00001" summary="Prueba modificacion URL quitandole el /public">
       <created>1679840229206</created>
