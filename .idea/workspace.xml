@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f84c1686-44ef-41da-ba74-849caeaca46f" name="Changes" comment="Prueba modificacion URL quitandole el /public">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f84c1686-44ef-41da-ba74-849caeaca46f" name="Changes" comment="Subiendo vendor" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -160,6 +161,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/j.rodriguezramirez/Desktop/prueba Url/lckm-cloud",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -172,7 +177,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679839972755</updated>
-      <workItem from="1679839974953" duration="297000" />
+      <workItem from="1679839974953" duration="890000" />
     </task>
     <task id="LOCAL-00001" summary="Prueba modificacion URL quitandole el /public">
       <created>1679840229206</created>
@@ -181,7 +186,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679840229206</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Prueba modificacion URL quitandole el /public">
+      <created>1679840293032</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679840293032</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Subiendo vendor">
+      <created>1679840501963</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679840501963</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +208,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Prueba modificacion URL quitandole el /public" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prueba modificacion URL quitandole el /public" />
+    <MESSAGE value="Subiendo vendor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Subiendo vendor" />
   </component>
 </project>
