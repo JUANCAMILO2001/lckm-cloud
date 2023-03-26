@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f84c1686-44ef-41da-ba74-849caeaca46f" name="Changes" comment="Subiendo vendor" />
+    <list default="true" id="f84c1686-44ef-41da-ba74-849caeaca46f" name="Changes" comment="Subiendo vendor">
+      <change beforePath="$PROJECT_DIR$/laravel_87/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/laravel_87/.gitignore" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,7 +179,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1679839972755</updated>
-      <workItem from="1679839974953" duration="890000" />
+      <workItem from="1679839974953" duration="940000" />
     </task>
     <task id="LOCAL-00001" summary="Prueba modificacion URL quitandole el /public">
       <created>1679840229206</created>
@@ -200,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679840501963</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Subiendo vendor">
+      <created>1679840898954</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679840898954</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
